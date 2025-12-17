@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SyncfusionToolkitBottomSheetScreenReader.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:bottomSheet="http://schemas.syncfusion.com/maui/toolkit"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Grid RowDefinitions="*">
+
+        <ScrollView>
+
+            <VerticalStackLayout Padding="30,0" Spacing="25">
+
+                <Image
+                    Aspect="AspectFit"
+                    HeightRequest="185"
+                    SemanticProperties.Description="dot net bot in a hovercraft number nine"
+                    Source="dotnet_bot.png" />
+
+                <Label
+                    SemanticProperties.HeadingLevel="Level1"
+                    Style="{StaticResource Headline}"
+                    Text="Hello, World!" />
+
+                <Button
+                    Clicked="OpenBottomSheet"
+                    HorizontalOptions="Fill"
+                    SemanticProperties.Hint="Counts the number of times you click"
+                    Text="Click to open bottom sheet" />
+
+            </VerticalStackLayout>
+
+        </ScrollView>
+
+        <bottomSheet:SfBottomSheet
+            AutomationProperties.IsInAccessibleTree="True"
+            HalfExpandedRatio="0.30"
+            IsOpen="True"
+            x:Name="BottomSheet">
+
+            <bottomSheet:SfBottomSheet.BottomSheetContent>
+
+                <Grid Padding="16">
+
+                    <Label
+                        SemanticProperties.HeadingLevel="Level1"
+                        Style="{StaticResource Headline}"
+                        Text="Screen reader can't focus on this label on the bottom sheet"
+                        TextColor="Black" />
+
+                </Grid>
+
+            </bottomSheet:SfBottomSheet.BottomSheetContent>
+
+        </bottomSheet:SfBottomSheet>
+
+    </Grid>
+
+</ContentPage>
