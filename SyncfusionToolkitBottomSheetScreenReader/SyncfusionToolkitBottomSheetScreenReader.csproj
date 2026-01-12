@@ -42,7 +42,6 @@
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-      <CodesignKey>Apple Development: andreasp97@icloud.com (922VAB3T92)</CodesignKey>
     </PropertyGroup>
 
     <ItemGroup>
